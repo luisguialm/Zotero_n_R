@@ -1,0 +1,57 @@
+---
+title: "How to Write Scientific Papers and  connect Zotero to your R Markdown"
+author: "Luis Andrés Guillén"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Why?
+
+Using R Markdown is a good way to show the anlysis that you carry out in R. That way you can show updated plots and directly import tables and other results, adn also directly import the references that you have saved in Zotero.  
+
+## Scientific Papers 
+Writing scientific paper is already a challenging and time consuming part of our work as scientist. It is common to use a lot of our time editing and making the text look nice, changing fonts, moving tables or figures (*that always move around as they which!*). 
+
+In order to avoid those problems, focus more on the writing and the content, writing equations and being able to reproduce papers in different formats, a set of programs called LATEX have been created. However, working in LATEX is quite difficult, and there is a pretty step learning curve to use it. 
+
+Luckyly, R developers around the globe have created packages that integrate R Markdown and LATEX. Making our lives much easier. 
+
+## Zotero:
+You will probable be working with hundreds of scientific references in your scientific career, so you need use a Reference Manager Program to make your life easier. There are may options outthere (e.g. Mendeley, EndNote), but a very popular, free and open source is ZOTERO. You can download it at http://www.zotero.com. 
+
+The standalone Zotero program allows you to install extensions that help it link to R Studio. You will also need to install packages in R so that R Markdown can read the libraries that you have in Zotero. 
+
+## Steps:
+
+0. Requirement:
+  - Internet connection.
+  - R, R studio and Zotero installed and up-to-date. 
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Example
+
+The file `Paper_example.Rmd` is an example of an R Markdown file that is formatted as a APA journal paper and has references within it. 
+
+## Acknowledgment
+
+Longer versions of the topics explain in this page can be found below. This authors have taken a long time to create guides and packages so I give full merit to their work. 
+
+**APA template:**
+
+**LATEX and R:**
+
+**Zotero and R:**
+
+
+*Thanks for reading and let me know how to improve the page if you have suggestions. Email: lg0018@mix.wvu.edu.* 
