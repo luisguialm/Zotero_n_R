@@ -1,0 +1,114 @@
+---
+title             : "My extremely interesting and novel paper research"
+shorttitle        : "The paper"
+
+author: 
+  - name          : "Luis Andres Guillen"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Percival Hall, Morgantown, WV"
+    email         : "lg0018@mix.wvu.com"
+  - name          : "Nicolas Zegre"
+    affiliation   : "1"
+
+affiliation:
+  - id            : "1"
+    institution   : "West Virginia University"
+
+authornote: |
+  Davis College of Agriculture and Design, 
+
+abstract: |
+  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline. Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.  One sentence clearly stating the **general problem** being addressed by  this particular study.  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.  One or two sentences to put the results into a more **general context**.  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "Novel, Impactful, Important, Cool, Interesting" 
+wordcount         : "X"
+
+bibliography      : ["references.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+library("citr")
+library("tidyr")
+library(tidyverse)
+library(urbnmapr)
+library(tinytex)
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+# Introduction
+The broad issue in your field get funneled into the aspects that you are going to study, as has been done in recent times by  [@abbottHumanDominationGlobal2019] (but see also @phillipsStorytellingEarthSciences2012). Then you justify why that is important and state some hypothesis. Later you tell the reader the objectives of your study and how the paper is organized. 
+
+# Methods
+We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+
+## Study site
+We collected the data from all of West Virginia, looking at the Homeownership rate, which maybe has something to do with something else (Figure 1).
+```{r fig1, fig.width=7, fig.asp=1, fig.cap= 'Home Ownership in WV.'}
+ countydata%>% left_join(counties, by = 'county_fips') %>%   filter(state_name =='West Virginia') %>% 
+  ggplot(mapping = aes(long, lat, group = group, fill = horate)) +
+    geom_polygon(color = "#ffffff", size = .25) +
+    labs(fill = 'Homeownership rate')
+```
+
+
+## Data analysis
+We used `r cite_r("references.bib")` for all our analyses.
+
+# Results
+We found that there is a positive relationship between the speed of a Car and the distance it needs in order to completey stop (figure 2)
+```{r}
+plot(cars, main= "Figure 2")
+```
+
+```{r,echo=FALSE}
+suma<-summary(lm(cars))
+```
+The linear model developed to explain that relationship is robust in the explanation of distance R^2^ =`r round(suma$r.squared, 2)`.
+
+Values can also be seen in table 1. 
+
+
+
+```{r, results = 'asis', warning=FALSE, message=FALSE}
+knitr::kable(head(cars))
+```
+
+# Discussion
+The findings have been also repoted in other papers...
+
+It can be concluded that driving at higher speeds can create more hazardous situations. 
+
+\newpage
+
+# References
+```{r create_r-references}
+r_refs(file = "references.bib")
+```
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id = "refs"></div>
+\endgroup
