@@ -74,11 +74,11 @@ After you have carried out both steps, you can access the Zotero library by clic
 
 These pictures show how inserting the pictures is done:
 
-![alt text](https://github.com/luisguialm/Zotero_n_R/fig1.png "Opening citr windows")
+!["Opening citr windows"](https://github.com/luisguialm/Zotero_n_R/blob/master/fig1.png)
 
-![alt text](https://github.com/luisguialm/Zotero_n_R/fig2.png "Linking to Zotero")
+![alt text](https://github.com/luisguialm/Zotero_n_R/master/fig2.png "Linking to Zotero")
 
-![alt text](https://github.com/luisguialm/Zotero_n_R/fig3.png "Looking for specific reference")
+![alt text](https://github.com/luisguialm/Zotero_n_R/master/fig3.png "Looking for specific reference")
 
 ## Example
 
