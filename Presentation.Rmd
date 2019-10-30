@@ -72,6 +72,14 @@ install.packages("citr")
 
 After you have carried out both steps, you can access the Zotero library by clicking on the Addin button in the tools bar: **R > Citr**. A new window will open where you will search for the reference that you are looking for. 
 
+These pictures show how inserting the pictures is done:
+
+![alt text](https://github.com/luisguialm/Zotero_n_R/fig1.png "Opening citr windows")
+
+![alt text](https://github.com/luisguialm/Zotero_n_R/fig2.png "Linking to Zotero")
+
+![alt text](https://github.com/luisguialm/Zotero_n_R/fig3.png "Looking for specific reference")
+
 ## Example
 
 The file `Paper_example.Rmd` is an example of an R Markdown file that is formatted as a APA journal paper and has references within it. 
