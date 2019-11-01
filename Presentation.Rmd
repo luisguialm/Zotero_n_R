@@ -58,6 +58,10 @@ install.packages('tinytex')
 devtools::install_github('yihui/tinytex')
 ```
 
+Besided the APA format. There seems to be any type of formats available already: look here:
+
+https://github.com/rstudio/rticles
+
 **2. Zotero compability:** 
 
 There are two installations needed for this step (one in `R` and the other in Zotero)
